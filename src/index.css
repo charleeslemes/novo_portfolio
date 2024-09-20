@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+html, body{
+  /* colors*/
+--color-01: #D9D9D9;
+--color-02: #1E1E1E;
+--color-03: #ffffff;
+--color-04: #FFA500;
+--color-05: #4b4a4a;
+    /*fonts*/
+--font-logo: "felipa", serif;
+--font-banner: "kurale", serif;
+--font-principal: "inter", serif;
+--font-habilidades: "Koulen", sans-serif;
+      
+
+height: 100%;
+box-sizing: border-box;
+font-family: var(--font-principal);
+background-color: var(--color-02);
+
+overflow-x: hidden;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+

@@ -1,0 +1,388 @@
+
+
+.center{
+    max-width: 1280px;
+    width: 100%;
+   
+}
+
+
+
+.mobile-nav{
+    display: none;
+}
+
+.container-banner{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./../assets/Banner-fundo-inicio.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.desktop-nav{
+   padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.desktop-nav .desktop-logo h2{
+    color: var(--color-03);
+    font-family: var(--font-logo);
+    width: 30px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.desktop-nav-menu ul{
+    display: flex;
+}
+
+.desktop-nav-menu ul li{
+    padding: 0 1.5rem;
+}
+
+.desktop-nav-menu ul li a{
+    color: var(--color-03);
+    transition: .2s ease-in-out;
+    font-size: 1.1rem;
+}
+
+.desktop-nav-menu ul li a:hover{
+    color: var(--color-04);
+}
+
+
+
+
+
+.box-text-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 32%;
+
+
+}
+
+.box-text-button h1{
+    font-family: var(--font-banner);
+    font-size: 90px;
+    color: var(--color-03);
+    font-weight: normal;
+    margin-right: 70px;
+}
+
+@media screen and (min-width:1500px){
+    .box-text-button h1{
+        font-size: 110px;
+    }
+}
+
+
+.box-text-button .button-link-projetos{
+    width: 200px;
+    height: 35px;
+    background-color: var(--color-01);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    margin-right: 5px;
+}
+
+.box-text-button .button-link-projetos a{
+    padding: 5px 60px;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    color: var(--color-02);
+   
+}
+
+.bullet{
+    
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-01);
+    border-radius: 50%;
+}
+
+.bullet img{
+  padding: 5px; 
+  color: var(--color-02);
+}
+
+
+.box-text-button .button-link-projetos:hover{
+    margin-right: 15px;
+}
+
+
+.text-developer{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+
+}
+
+.text-developer h1{
+    font-family: var(--font-banner);
+    font-size: 90px;
+    color: var(--color-03);
+    font-weight: normal;
+}
+
+@media screen and (min-width:1500px){
+    .text-developer h1{
+        font-size: 110px;
+    }
+
+    .text-developer{
+        
+        top: 48%;
+    
+    }
+
+}
+
+
+
+/* css do container de habilidades*/
+
+.container-habilidades{
+    width: 100%;
+    position: relative;
+}
+
+
+
+.container-habilidades .box-habilidades{
+    width:60%;
+    height: 200px;
+    display: flex;
+    background-color: var(--color-01);
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.container-habilidades .box-habilidades .text-habilidades{
+    padding: 20px;
+    width: 50%;
+}
+
+.container-habilidades .box-habilidades .text-habilidades h2{
+    background: rgb(132,132,132);
+    background: linear-gradient(90deg, rgba(132,132,132,1) 0%, rgba(30,30,30,1) 16%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: var(--font-habilidades);
+
+    margin-top: -5px;
+    margin-bottom: -24px;
+
+    font-size: 30px;
+    
+}
+
+
+.container-habilidades .box-habilidades .text-habilidades p{
+    margin-top: 30px;
+    text-align: justify;
+    color: var(--color-02);
+}
+
+.container-habilidades .box-habilidades .icons-habilidades{
+    margin-top: 10px;
+    width: 50%;
+    display: flex;
+   flex-wrap: wrap;
+}
+
+.box-hb{
+    width: 70px;
+    height: 70px;
+    margin: 7px;
+    background-color: var(--color-02);
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+.box-hb img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+/* começando container sobre*/
+
+
+.container-sobre{
+    max-width: 1280px;
+    width: 100%;
+    margin: 200px auto 0 auto;
+
+}
+
+.container-sobre h1{
+    color:  var(--color-03);
+    font-size: 25px;
+    font-weight: normal;
+
+}
+
+
+.text-sobre{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-sobre{
+    margin: 20px auto;
+    max-width: 1000px;
+    display: flex;
+    width: 100%;
+
+}
+
+.text-sobre .text01{
+    max-width: 600px;
+    background-color: var(--color-01);
+    border-radius: 20px ;
+    padding: 12px;
+    margin: 20px 0;
+}
+
+
+.text-sobre .text01 p{
+    color: var(--color-02);
+    font-size: 15px;
+}
+
+
+.text-sobre .text02{
+    margin: 20px 0 0 90px;
+    padding: 10px;
+    max-width: 560px;
+    border: 1px solid var(--color-05);    
+    border-radius: 20px;
+}
+
+.text-sobre .text02 p{
+    color: var(--color-01);
+    font-size: 15px;
+}
+
+.img-sobre{
+    width: 30%;
+
+}
+
+.img-sobre img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+/* testes abaixo*/
+
+.container-projects{
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  
+  .slider{
+    padding: 10px;
+    margin: 15px;
+    width: 100%;
+    transition: .5s;
+  
+  }
+  
+  .slider img{
+    width: 90%;
+    
+  }
+
+
+  
+  .react-multiple-carousel__arrow {
+    background-color: transparent!important;
+  }
+
+  
+  
+  .react-multiple-carousel__arrow--left::before{
+    font-size: 50px !important;
+  }
+  
+  
+  .react-multiple-carousel__arrow--right::before{
+    font-size: 50px !important;
+  }
+  
+  
+  .container-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  
+  }
+
+  
+  .informacoes{
+    width: 81%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: -120px;
+    left: 0;
+    color: white;
+    transition: 0.5s;
+    padding: 20px;
+    text-align: center;
+    
+  }
+
+  .informacoes p{
+    color: var(--color-01);
+    margin-bottom: 30px;
+  }
+  
+  .informacoes a{
+    color: var(--color-04);
+    border: 1px solid var(--color-04);
+    padding: 8px;
+    border-radius: 20px;
+  }
+  .informacoes:hover{
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.781);
+
+  }
+
+  .slider:hover{
+    scale: 1.2;
+  }
