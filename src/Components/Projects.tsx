@@ -24,8 +24,12 @@ function Projects(props:any){
       };
 
 
-      function RenderProjects (){
-        let i:number =0
+     /* 
+     
+      Função era para renderizar o carrosel, mas só renderização a primeira  linha do projeto
+      feito um map no html, funcionou normalmente.
+     function RenderProjects (){
+        let i:number;
    
           for(i =0; i< props.obj.length; i++){
               return(
@@ -43,7 +47,7 @@ function Projects(props:any){
               )
           }
         
-      }
+      }*/
    
 
     return(
@@ -52,7 +56,26 @@ function Projects(props:any){
 <div className="container-projects">
     <Carousel  showDots={true} responsive={responsive}>
         {
-          RenderProjects()
+
+          props.obj.map((n:any,index:number)=>{
+            return(
+              <>
+              <div className='slider'>
+                <div className='container-img'>
+                    <div className="informacoes">
+                      <p>Texto explicativo sobre o webSite</p>
+                      <a target='blank' href={props.obj[index].link}>Visualizar</a>
+                      </div>
+                    <img src={props.obj[index].img} alt="" />
+                    
+                    
+                </div>
+             </div>
+
+
+              </>
+            )
+          })
         }
    
     </Carousel>

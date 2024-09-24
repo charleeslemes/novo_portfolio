@@ -20,6 +20,7 @@ import imgFormAvancado from '../assets/formAvancado.svg';
 import imgGeradorSenha from '../assets/geradorSenha.svg';
 import imgTelaLogin from '../assets/telaLogin.svg';
 import imgTodoList from '../assets/TodoList.svg';
+import imgDashboard from '../assets/dashboard 1.svg';
 
 
 
@@ -37,11 +38,18 @@ function Home(){
 
     const imgProjetosReais: Array<Projeto> = [
         {img: imgAdvMichel, link: 'https://advmichelcantu.com.br/'},
+       
         
     ]
 
     const imgProjetosPessoais: Array<Projeto> = [
         {img: imgGeradorSenha, link: 'https://geradorsenhac.netlify.app/'},
+        {img: imgDashboard, link: 'https://testeminehr.netlify.app/'},
+        {img: imgFormAvancado, link: 'https://testeminehr.netlify.app/'},
+        {img: imgTelaLogin, link: 'https://testeminehr.netlify.app/'},
+        {img: imgTodoList, link: 'https://testeminehr.netlify.app/'},
+        
+        
         
     ]
 
@@ -112,7 +120,7 @@ function Home(){
 
 
             <div className="container-sobre">
-                <h1>.../Sobre mim...</h1>
+                <h1 className="title_main">.../Sobre mim...</h1>
 
                 <div className="box-sobre">
                     <div className="text-sobre">
@@ -135,12 +143,23 @@ function Home(){
 
 
             <div className="container-projeto-real">
+            <h1 className="title_main">.../Projetos Reais ...</h1>
                 <Projects obj={imgProjetosReais}/>
             </div>
 
-            <div className="container-projeto-real">
+            <div className="container-projeto-pessoal">
+            <h1 className="title_main">.../Projetos Pessoais...</h1>
                 <Projects obj={imgProjetosPessoais}/>
             </div>
+
+
+
+
+            
+
+
+
+            
 
 
 

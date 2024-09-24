@@ -7,6 +7,13 @@
 }
 
 
+.title_main{
+    color:  var(--color-03);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
 
 .mobile-nav{
     display: none;
@@ -243,13 +250,6 @@
 
 }
 
-.container-sobre h1{
-    color:  var(--color-03);
-    font-size: 25px;
-    font-weight: normal;
-
-}
-
 
 .text-sobre{
     width: 70%;
@@ -310,36 +310,38 @@
     max-width: 1300px;
     margin: 0 auto;
     margin-bottom: 100px;
+    
   }
   
   .slider{
-    padding: 10px;
+    padding: 15px;
     margin: 15px;
     width: 100%;
     transition: .5s;
+    
   
   }
   
   .slider img{
     width: 90%;
+  }
+
+  .react-multiple-carousel__arrow {
+    background-color: transparent!important;
+  
     
   }
 
-
-  
-  .react-multiple-carousel__arrow {
-    background-color: transparent!important;
-  }
-
-  
   
   .react-multiple-carousel__arrow--left::before{
     font-size: 50px !important;
+    
   }
   
   
   .react-multiple-carousel__arrow--right::before{
     font-size: 50px !important;
+   
   }
   
   
@@ -353,15 +355,14 @@
 
   
   .informacoes{
-    width: 81%;
-    height: 100%;
+    width: 90%;
+    height: 98%;
     cursor: pointer;
     position: absolute;
-    top: -120px;
+    top: -109px;
     left: 0;
     color: white;
     transition: 0.5s;
-    padding: 20px;
     text-align: center;
     
   }
@@ -369,6 +370,7 @@
   .informacoes p{
     color: var(--color-01);
     margin-bottom: 30px;
+    margin-top: 30px;
   }
   
   .informacoes a{
@@ -385,4 +387,22 @@
 
   .slider:hover{
     scale: 1.2;
+  }
+
+  .container-projeto-real{
+    max-width: 1280px;
+    width: 100%;
+    margin: 100px auto 0 auto;
+    
+  }
+
+  .container-projeto-pessoal{
+    max-width: 1280px;
+    width: 100%;
+    margin:0 auto;
+   
+  }
+
+  .container-projeto-pessoal h1{
+    text-align: right;
   }
