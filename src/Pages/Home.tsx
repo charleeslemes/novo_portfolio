@@ -143,7 +143,7 @@ function Home(){
 
 
             <div className="container-projeto-real">
-            <h1 className="title_main">.../Projetos Reais ...</h1>
+            <h1 className="title_main">.../Projetos Freelancer ...</h1>
                 <Projects obj={imgProjetosReais}/>
             </div>
 
@@ -152,10 +152,56 @@ function Home(){
                 <Projects obj={imgProjetosPessoais}/>
             </div>
 
-
-
-
             
+            <div className="container-formulario-email">
+                <div className="container-borda">
+                    <div className="box-invisivel-cima"></div>
+                    <div className="box-invisivel-baixo"></div>
+                    <h1 className="title_main title-contato-absolute">.../contato ...</h1>
+               
+
+
+                    <div className="box-principal-contato">
+                            <div className="box-descritivo-contato">
+                                    <h3>Charles Lemes</h3>
+                                    <h4>Front-End Developer</h4>
+
+                                    <h4>Design e WebSite</h4>
+                                    <h4>Desenvolvido</h4>
+                                    <h4>Por Charles Lemes</h4>
+
+                            </div>
+
+                            <div className="box-formulario">
+                                    <form className="form-contato" action="">
+                                        <input type="text" />
+                                        <input type="text" />
+                                        <input type="text" />
+                                        <input type="button" value="Enviar" />
+                                    </form>
+
+                            </div>
+
+                            <div className="box-links-contato">
+                                <ul>
+                                    <li><a href="">Github</a></li>
+                                    <li><a href="">Linkedin</a></li>
+                                    <li><a href="">WhatsApp</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    
+                </div>
+
+
+           
+            
+
+            </div>
+
+
+
 
 
 

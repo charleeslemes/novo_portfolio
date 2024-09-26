@@ -403,6 +403,74 @@
    
   }
 
-  .container-projeto-pessoal h1{
+  .container-projeto-real h1{
     text-align: right;
   }
+
+
+
+  /* formatação formulario e-mail*/
+
+
+
+  .container-formulario-email{
+    margin: 40px;
+
+  }
+
+
+  .container-formulario-email .container-borda{
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid var(--color-06);
+    position: relative;
+    
+  }
+
+  .title-contato-absolute{
+    position: absolute;
+    top: -20px;
+    right: 10%;
+    background-color: var(--color-02);
+    width: 200px;
+    text-align: center;
+  }
+
+  .box-invisivel-cima{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 80%;
+    height: 20px;
+    background-color: var(--color-02);
+  }
+
+
+  .box-invisivel-baixo{
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 90%;
+    height: 20px;
+    background-color: var(--color-02);
+  }
+
+
+  .box-principal-contato{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box-descritivo-contato, .box-formulario, .box-links-contato{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+
+ .form-contato{
+    display: flex;
+    flex-direction: column;
+ }
