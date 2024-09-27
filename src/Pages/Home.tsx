@@ -15,12 +15,12 @@ import html from '../assets/Html-icon.svg';
 import css from '../assets/Css-icon.svg';
 
 
-import imgAdvMichel from '../assets/AdvMichel.svg'
-import imgFormAvancado from '../assets/formAvancado.svg';
-import imgGeradorSenha from '../assets/geradorSenha.svg';
-import imgTelaLogin from '../assets/telaLogin.svg';
-import imgTodoList from '../assets/TodoList.svg';
-import imgDashboard from '../assets/dashboard 1.svg';
+import imgAdvMichel from '../assets/adv-michel.svg'
+import imgFormAvancado from '../assets/form-avancado.svg';
+import imgGeradorSenha from '../assets/gerador-Senha.svg';
+import imgTelaLogin from '../assets/tela-login.svg';
+import imgTodoList from '../assets/todo-list.svg';
+import imgDashboard from '../assets/dashboard1.svg';
 
 
 
@@ -30,6 +30,8 @@ import imgSobre from '../assets/image-sobre.svg';
 type Projeto ={
     img: string;
     link: string;
+    description: string;
+    stacks: string;
 }
 
 function Home(){
@@ -37,17 +39,17 @@ function Home(){
     const imgHabilidades: string[] = [reaect, javascript, typescript, sass, git, node, html,css];
 
     const imgProjetosReais: Array<Projeto> = [
-        {img: imgAdvMichel, link: 'https://advmichelcantu.com.br/'},
+        {img: imgAdvMichel, description:'Esse projeto consiste em uma lading page de uma advocacia, site foi desenvolvido para ser intuitivo e 100% funcional e responsivo.', stacks:'HTML - Sass - JavaScript', link: 'https://advmichelcantu.com.br/'},
        
         
     ]
 
     const imgProjetosPessoais: Array<Projeto> = [
-        {img: imgGeradorSenha, link: 'https://geradorsenhac.netlify.app/'},
-        {img: imgDashboard, link: 'https://testeminehr.netlify.app/'},
-        {img: imgFormAvancado, link: 'https://testeminehr.netlify.app/'},
-        {img: imgTelaLogin, link: 'https://testeminehr.netlify.app/'},
-        {img: imgTodoList, link: 'https://testeminehr.netlify.app/'},
+        {img: imgGeradorSenha, description:'Este projeto foi desenvolvido para transformar uma senha simples em uma senha mais elaborada, incorporando caracteres especiais, números e a opção de incluir letras maiúsculas.', stacks:'React - TypeScript - css', link: 'https://geradorsenhac.netlify.app/'},
+        {img: imgDashboard, description:'Este projeto foi realizado como parte de um teste prático de contratação, no qual foi desenvolvido um dashboard que permite filtrar entre dois gráficos seria um de Barras outro Scatter.', stacks:'React - JavaScript - Styled Components - ApexCharts', link: 'https://testeminehr.netlify.app/'},
+        {img: imgFormAvancado, description:'Este projeto foi desenvolvido para aprimorar minhas habilidades na manipulação de formulários dinâmicos. Ele inclui um formulário que permite adicionar ou remover campos conforme necessário.', stacks:'React - TypeScript - HookForm - Zod', link: 'https://testeminehr.netlify.app/'},
+        {img: imgTelaLogin,  description:'Este projeto foi desenvolvido para aprimorar minhas habilidades na validação de campos em formulários.', stacks:'HTML - CSS - JavaScript Puro', link: 'https://telalogin02.netlify.app/'},
+        {img: imgTodoList, description:'Este projeto consiste em um sistema de tarefas do dia a dia, que permite controlar quantas tarefas ainda precisam ser feitas e quantas já foram concluídas. ', stacks:'React - TypeScript - Sass', link: 'https://testeminehr.netlify.app/'},
         
         
         

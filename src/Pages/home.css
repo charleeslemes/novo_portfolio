@@ -356,10 +356,10 @@
   
   .informacoes{
     width: 90%;
-    height: 98%;
+    height: 170%;
     cursor: pointer;
     position: absolute;
-    top: -109px;
+    top: -170px;
     left: 0;
     color: white;
     transition: 0.5s;
@@ -369,18 +369,32 @@
 
   .informacoes p{
     color: var(--color-01);
-    margin-bottom: 30px;
-    margin-top: 30px;
+    width: 80%;
+    font-size: 12px;
+    text-align: center;
+    margin: 30px auto 5px auto;
+    text-align: justify;
   }
-  
+
+  .informacoes h5{
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: var(--color-04);
+    font-weight: normal;
+  }
+
+
   .informacoes a{
     color: var(--color-04);
     border: 1px solid var(--color-04);
     padding: 8px;
     border-radius: 20px;
+    font-size: 13px;
+    
   }
   .informacoes:hover{
     top: 0;
+    height: 98%;
     background-color: rgba(0, 0, 0, 0.781);
 
   }
