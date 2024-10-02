@@ -1,5 +1,7 @@
 
 import React from "react";
+import emailjs from '@emailjs/browser'
+
 import './home.css';
 import Projects from "../Components/Projects";
 
@@ -26,6 +28,7 @@ import imgDashboard from '../assets/dashboard1.svg';
 
 
 import imgSobre from '../assets/image-sobre.svg';
+import Formulario from "../Components/Formulario";
 
 type Projeto ={
     img: string;
@@ -33,6 +36,8 @@ type Projeto ={
     description: string;
     stacks: string;
 }
+
+
 
 function Home(){
     const logo = "<Charles Lemes/>"
@@ -54,6 +59,44 @@ function Home(){
         
         
     ]
+
+    const [name, setName] = React.useState<string>('');
+    const [email, setEmail] = React.useState<string>('');
+    const [message, setMessage] = React.useState<string>('');
+    const [modalEnviando, setModalEnviando] = React.useState<boolean>(false);
+
+
+    function sendEmail(e:any){
+        e.preventDefault();
+        setModalEnviando(true);
+
+        if(name === '' || email === '' || message === ''){
+            alert('preencher todos os campo')
+            return
+        }
+
+        const templateParms = {
+            from_name: name,
+            email: email,
+            message: message,
+        }
+        
+
+        emailjs.send("service_4yr49ia", "template_82hq4k9", templateParms,"tHzFnkprfUCmUrmuO")
+        .then((response) => {
+          
+          console.log("email enviado", response.status, response.text)
+          setModalEnviando(false)
+          alert('Enviado com sucesso');
+          setEmail('')
+          setName('')
+          setMessage('')
+          
+        }, (err) =>{
+          console.log("error:", err)
+        })
+          
+    }
 
     return(
         <>
@@ -165,23 +208,18 @@ function Home(){
 
                     <div className="box-principal-contato">
                             <div className="box-descritivo-contato">
-                                    <h3>Charles Lemes</h3>
-                                    <h4>Front-End Developer</h4>
-
-                                    <h4>Design e WebSite</h4>
-                                    <h4>Desenvolvido</h4>
-                                    <h4>Por Charles Lemes</h4>
+                                    <h2>Charles Lemes</h2>
+                                    <h5>Front-End Developer</h5>
+                                    <h5 style={{marginTop: '120px'}}>Design e WebSite</h5>
+                                    <h5>Desenvolvido</h5>
+                                    <h5>Por Charles Lemes</h5>
 
                             </div>
 
                             <div className="box-formulario">
-                                    <form className="form-contato" action="">
-                                        <input type="text" />
-                                        <input type="text" />
-                                        <input type="text" />
-                                        <input type="button" value="Enviar" />
-                                    </form>
-
+                            <form className="form-contato" onSubmit={sendEmail}>
+                                    <Formulario setName={setName} setEmail={setEmail} setMessage={setMessage} modalEnviando={modalEnviando}/>
+                            </form>
                             </div>
 
                             <div className="box-links-contato">
