@@ -426,7 +426,7 @@
 
   .container-formulario-email{
     width: 100%;
-    margin: 40px auto;
+    margin: 70px auto;
 
   }
 
@@ -548,7 +548,64 @@ outline: none;
 .form-contato input[type="submit"]{
   border: 0;
   cursor: pointer;
+  transition: .4s;
 }
 
+.form-contato input[type="submit"]:hover{
+  color: var(--color-04);
+}
+
+
  /*fim formulario*/
+
+
+ .box-links-contato a{
+  color: var(--color-03);
+  margin-top: 5px;
+  font-size: 15px;
+  transition: .4s;
+ }
+
+ .box-links-contato a:hover{
+  color: var(--color-04);
+
+ }
+
+ .box-links-contato li{
+
+  margin-top: 5px;
+
+ }
+
+
+ .footer-portfolio{
+  background-color: var(--color-01);
+  display: flex;
+  width: 100%;
+  padding: 7px;
+  justify-content: space-around;
+ }
+
+
+ .logoFooter h2{
+  color: var(--color-02);
+    font-family: var(--font-logo);
+    width: 30px;
+    font-weight: normal;
+    font-size: 30px;
+ }
+
+ .footer-portfolio ul{
+  display: flex;
+  align-items: center;
+ }
+
+ .footer-portfolio ul li{
+    margin: 0 8px;
+ }
+
+ .footer-portfolio ul li a{
+  color: var(--color-02);
+}
+
 

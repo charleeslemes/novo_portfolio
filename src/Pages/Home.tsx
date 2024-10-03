@@ -1,7 +1,8 @@
 
 import React from "react";
 import emailjs from '@emailjs/browser'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './home.css';
 import Projects from "../Components/Projects";
 
@@ -68,34 +69,85 @@ function Home(){
 
     function sendEmail(e:any){
         e.preventDefault();
-        setModalEnviando(true);
+       
 
-        if(name === '' || email === '' || message === ''){
-            alert('preencher todos os campo')
+        if(name === ''){
+            toast.warn('Preencha o campo nome!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
             return
         }
 
-        const templateParms = {
-            from_name: name,
-            email: email,
-            message: message,
+        if(email === ''){
+            toast.warn('Preencha o campo e-mail!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+            return
         }
-        
 
-        emailjs.send("service_4yr49ia", "template_82hq4k9", templateParms,"tHzFnkprfUCmUrmuO")
-        .then((response) => {
-          
-          console.log("email enviado", response.status, response.text)
-          setModalEnviando(false)
-          alert('Enviado com sucesso');
-          setEmail('')
-          setName('')
-          setMessage('')
-          
-        }, (err) =>{
-          console.log("error:", err)
-        })
-          
+        if(message === ''){
+            toast.warn('Preencha o campo de mensagem!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+            return
+        }
+
+        else{
+            setModalEnviando(true);
+            const templateParms = {
+                from_name: name,
+                email: email,
+                message: message,
+            }
+
+            emailjs.send("service_4yr49ia", "template_82hq4k9", templateParms,"tHzFnkprfUCmUrmuO")
+            .then((response) => {
+              
+              console.log("email enviado", response.status, response.text)
+              setModalEnviando(false)
+              toast.success('Enviado com sucesso', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+              setEmail('')
+              setName('')
+              setMessage('')
+              
+            }, (err) =>{
+              console.log("error:", err)
+            })
+              
+
+        }
+
+       
     }
 
     return(
@@ -218,15 +270,24 @@ function Home(){
 
                             <div className="box-formulario">
                             <form className="form-contato" onSubmit={sendEmail}>
-                                    <Formulario setName={setName} setEmail={setEmail} setMessage={setMessage} modalEnviando={modalEnviando}/>
+                                    <Formulario 
+                                    setName={setName} 
+                                    setEmail={setEmail} 
+                                    setMessage={setMessage} 
+                                    modalEnviando={modalEnviando}
+                                    name={name}
+                                    email={email}
+                                    message={message}
+                                    />
                             </form>
+                            <ToastContainer />
                             </div>
 
                             <div className="box-links-contato">
                                 <ul>
-                                    <li><a href="">Github</a></li>
-                                    <li><a href="">Linkedin</a></li>
-                                    <li><a href="">WhatsApp</a></li>
+                                    <li><a target="_blank" href="https://github.com/charleeslemes/">Github</a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/charleeslemes/">Linkedin</a></li>
+                                    <li><a target="_blank" href="https://wa.me/5541995458166?text=">WhatsApp</a></li>
                                 </ul>
                             </div>
 
@@ -234,11 +295,19 @@ function Home(){
                     
                 </div>
 
-
-           
-            
-
             </div>
+
+
+            <footer className="footer-portfolio">
+                <div className="logoFooter">
+                        <h2>{logo}</h2>
+                </div>
+                <ul>
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Projetos</a></li>
+                </ul>
+            </footer>
 
 
 
