@@ -63,10 +63,10 @@ function Projects(props:any){
               <div className='slider'>
                 <div className='container-img'>
                     <div className="informacoes">
-                      <p>{props.obj[index].description}</p>
-                      <h5>{props.obj[index].stacks}</h5>
-                      <a target='blank' href={props.obj[index].link}>Visualizar</a>
-                      {n.link}
+                      <p>{n.description}</p>
+                      <h5>{n.stacks}</h5>
+                      <a target='blank' href={n.link}>Visualizar</a>
+                      
                       </div>
                     <img src={props.obj[index].img} alt="" />
                     
