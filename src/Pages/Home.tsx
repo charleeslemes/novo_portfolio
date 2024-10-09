@@ -160,7 +160,7 @@ function Home(){
 
 
     function AbrirMenuMobile(){
-       let modalMobile = document.querySelector('.mobile-nav-menu');
+       let modalMobile: any = document.querySelector('.mobile-nav-menu');
         if(modalNavMobile !== true){
             setModalNavMobile(true);
             modalMobile.style.left="-20px";
@@ -177,8 +177,8 @@ function Home(){
     return(
         <>
 
-            <a name="inicio"></a>
-            <div className="container-banner">
+            
+            <div id="inicio" className="container-banner">
                 <div className="desktop-nav">
                     <div className="desktop-logo"><h2>{logo}</h2></div>
                     <nav className="desktop-nav-menu">
@@ -242,8 +242,8 @@ function Home(){
 
 
 
-            <a name ="sobre"></a>
-            <div className="container-sobre">
+            
+            <div id="sobre" className="container-sobre">
                 <h1 className="title_main">.../Sobre mim...</h1>
 
                 <div className="box-sobre">
@@ -265,8 +265,8 @@ function Home(){
                 </div>
             </div>
 
-            <a name ="projetos"></a>
-            <div className="container-projeto-real">
+           
+            <div id="projetos" className="container-projeto-real">
             <h1 className="title_main">.../Projetos Freelancer ...</h1>
                 <Projects obj={imgProjetosReais}/>
             </div>
@@ -276,8 +276,8 @@ function Home(){
                 <Projects obj={imgProjetosPessoais}/>
             </div>
 
-            <a name ="contato"></a>
-            <div className="container-formulario-email">
+           
+            <div id="contato" className="container-formulario-email">
                 <div className="container-borda">
                     <div className="box-invisivel-cima"></div>
                     <div className="box-invisivel-baixo"></div>
