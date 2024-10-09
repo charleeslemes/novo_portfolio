@@ -57,9 +57,9 @@ function Home(){
     const imgProjetosPessoais: Array<Projeto> = [
         {img: imgGeradorSenha, description:'Este projeto foi desenvolvido para transformar uma senha simples em uma senha mais elaborada, incorporando caracteres especiais, números e a opção de incluir letras maiúsculas.', stacks:'React - TypeScript - css', link: 'https://geradorsenhac.netlify.app/'},
         {img: imgDashboard, description:'Este projeto foi realizado como parte de um teste prático de contratação, no qual foi desenvolvido um dashboard que permite filtrar entre dois gráficos seria um de Barras outro Scatter.', stacks:'React - JavaScript - Styled Components - ApexCharts', link: 'https://testeminehr.netlify.app/'},
-        {img: imgFormAvancado, description:'Este projeto foi desenvolvido para aprimorar minhas habilidades na manipulação de formulários dinâmicos. Ele inclui um formulário que permite adicionar ou remover campos conforme necessário.', stacks:'React - TypeScript - HookForm - Zod', link: 'https://testeminehr.netlify.app/'},
+        {img: imgFormAvancado, description:'Este projeto foi desenvolvido para aprimorar minhas habilidades na manipulação de formulários dinâmicos. Ele inclui um formulário que permite adicionar ou remover campos conforme necessário.', stacks:'React - TypeScript - HookForm - Zod', link: 'https://splendid-pie-5dcdc0.netlify.app/'},
         {img: imgTelaLogin,  description:'Este projeto foi desenvolvido para aprimorar minhas habilidades na validação de campos em formulários.', stacks:'HTML - CSS - JavaScript Puro', link: 'https://telalogin02.netlify.app/'},
-        {img: imgTodoList, description:'Este projeto consiste em um sistema de tarefas do dia a dia, que permite controlar quantas tarefas ainda precisam ser feitas e quantas já foram concluídas. ', stacks:'React - TypeScript - Sass', link: 'https://testeminehr.netlify.app/'},
+        {img: imgTodoList, description:'Este projeto consiste em um sistema de tarefas do dia a dia, que permite controlar quantas tarefas ainda precisam ser feitas e quantas já foram concluídas. ', stacks:'React - TypeScript - Sass', link: 'https://todolists-ts.netlify.app/'},
         
         
         
