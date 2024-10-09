@@ -26,6 +26,8 @@ background-color: var(--color-02);
 
 overflow-x: hidden;
 
+scroll-behavior: smooth;
+
 }
 
 a{

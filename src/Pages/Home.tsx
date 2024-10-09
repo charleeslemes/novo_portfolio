@@ -26,6 +26,10 @@ import imgTodoList from '../assets/todo-list.svg';
 import imgDashboard from '../assets/dashboard1.svg';
 
 
+import menu from '../assets/menu.png';
+import fechar from '../assets/fechar.png';
+
+
 
 
 import imgSobre from '../assets/image-sobre.svg';
@@ -65,6 +69,9 @@ function Home(){
     const [email, setEmail] = React.useState<string>('');
     const [message, setMessage] = React.useState<string>('');
     const [modalEnviando, setModalEnviando] = React.useState<boolean>(false);
+
+
+    const [modalNavMobile, setModalNavMobile] = React.useState<boolean>(false)
 
 
     function sendEmail(e:any){
@@ -150,26 +157,46 @@ function Home(){
        
     }
 
+
+
+    function AbrirMenuMobile(){
+       let modalMobile = document.querySelector('.mobile-nav-menu');
+        if(modalNavMobile !== true){
+            setModalNavMobile(true);
+            modalMobile.style.left="-20px";
+        }
+
+        else{
+            setModalNavMobile(false);
+            modalMobile.style.left="-400px";
+        }
+        
+
+    }
+
     return(
         <>
-            
+
+            <a name="inicio"></a>
             <div className="container-banner">
                 <div className="desktop-nav">
                     <div className="desktop-logo"><h2>{logo}</h2></div>
                     <nav className="desktop-nav-menu">
                         <ul>
-                            <li><a href="#">Início</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#contato">Contato</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div className="mobile-nav">
+                <div className="desktop-logo mobile-logo"><h2>{logo}</h2></div>
+                <div className="icone-modal" onClick={AbrirMenuMobile}><img src={modalNavMobile? fechar : menu} alt="" /></div>
                 <nav className="mobile-nav-menu">
                         <ul>
-                            <li><a href="#">Início</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#contato">Contato</a></li>
                         </ul>
                     </nav>
 
@@ -178,7 +205,7 @@ function Home(){
                 <div className="box-text-button">
                     <h1>Front-end</h1>
                     <div className="button-link-projetos">
-                        <a href="">Projetos</a>
+                        <a href="#projetos">Projetos</a>
                     </div>
                     <div className="bullet"><img src={Arrow} alt="" /></div>
                 </div>
@@ -215,7 +242,7 @@ function Home(){
 
 
 
-
+            <a name ="sobre"></a>
             <div className="container-sobre">
                 <h1 className="title_main">.../Sobre mim...</h1>
 
@@ -238,7 +265,7 @@ function Home(){
                 </div>
             </div>
 
-
+            <a name ="projetos"></a>
             <div className="container-projeto-real">
             <h1 className="title_main">.../Projetos Freelancer ...</h1>
                 <Projects obj={imgProjetosReais}/>
@@ -249,7 +276,7 @@ function Home(){
                 <Projects obj={imgProjetosPessoais}/>
             </div>
 
-            
+            <a name ="contato"></a>
             <div className="container-formulario-email">
                 <div className="container-borda">
                     <div className="box-invisivel-cima"></div>
@@ -303,21 +330,11 @@ function Home(){
                         <h2>{logo}</h2>
                 </div>
                 <ul>
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </footer>
-
-
-
-
-
-
-            
-
-
-
             
         </>
     )

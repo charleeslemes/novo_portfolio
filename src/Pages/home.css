@@ -13,7 +13,56 @@
 
 
 .mobile-nav{
-    display: none;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media screen and (max-width:780px){
+  .mobile-nav{
+    display: flex;
+  }
+}
+
+.iconne-modal{
+  cursor: pointer;
+}
+
+.mobile-nav-menu{
+  background-color: rgba(248, 70, 0, 0.884);
+  width: 300px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  left: -400px;
+  display: block;
+  height: 100vh;
+  transition: .4s ease;
+}
+
+.icone-modal img{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.mobile-nav-menu ul{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mobile-nav-menu ul li{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mobile-nav-menu ul li a{
+  color: var(--color-03);
+  font-size: 35px;
 }
 
 .container-banner{
@@ -27,17 +76,25 @@
 }
 
 
-
 .desktop-nav{
    padding-top: 15px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
+}
+
+@media screen and (max-width:780px){
+  .desktop-nav{
+    display: none;
+  }
 }
 
 
-.desktop-nav .desktop-logo h2{
+
+
+.desktop-logo h2{
     color: var(--color-03);
     font-family: var(--font-logo);
     width: 30px;
@@ -74,9 +131,9 @@
     justify-content: center;
     position: absolute;
     top: 32%;
-
-
 }
+
+
 
 .box-text-button h1{
     font-family: var(--font-banner);
@@ -159,6 +216,44 @@
 
 }
 
+@media screen and (max-width:780px){
+  .box-text-button{
+   flex-direction: column-reverse;
+  }
+ 
+  .bullet{
+   display: none;
+  }
+ 
+  .text-developer{
+    top: 45%;
+    left: 12%;
+   }
+ }
+
+ @media screen and (max-width:460px){
+    .box-text-button h1{
+      font-size: 4.7rem;
+  
+    }
+    .text-developer h1{
+      
+      font-size: 4.7rem;
+  
+    }
+ }
+
+ @media screen and (max-width:395px){
+  .box-text-button h1{
+    font-size: 4.3rem;
+
+  }
+  .text-developer h1{
+    
+    font-size: 4.3rem;
+
+  }
+}
 
 
 /* css do container de habilidades*/
@@ -167,7 +262,6 @@
     width: 100%;
     position: relative;
 }
-
 
 
 .container-habilidades .box-habilidades{
@@ -182,9 +276,11 @@
     border-radius: 20px;
 }
 
+
+
 .container-habilidades .box-habilidades .text-habilidades{
     padding: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 .container-habilidades .box-habilidades .text-habilidades h2{
@@ -212,7 +308,8 @@
 
 .container-habilidades .box-habilidades .icons-habilidades{
     margin-top: 10px;
-    width: 50%;
+    margin-bottom: 10px;
+    width: 60%;
     display: flex;
    flex-wrap: wrap;
 }
@@ -235,6 +332,21 @@
     
 }
 
+
+@media screen and (max-width:1005px){
+  .container-habilidades .box-habilidades .text-habilidades{
+    display: none;
+  }
+
+  .container-habilidades .box-habilidades {
+   width: 90%;
+   height: auto;
+  }
+  .icons-habilidades{
+    width: 100% !important;
+    justify-content: center;
+  }
+}
 
 
 /* começando container sobre*/
@@ -301,7 +413,23 @@
     object-fit: contain;
 }
 
-/* testes abaixo*/
+
+@media screen and (max-width:780px){
+  .text-sobre{
+    width: 90%;
+    margin: auto;
+  }
+  .img-sobre{
+    display: none;
+  }
+
+  .text-sobre .text02{
+    margin: 20px 0 0 40px;
+  
+  }
+}
+
+/* projetos carrosel*/
 
 .container-projects{
     max-width: 1300px;
@@ -362,6 +490,20 @@
     transition: 0.5s;
     text-align: center;
     
+  }
+
+  @media screen and (max-width:600px){
+    .informacoes{
+      top: 0;
+      height: 98%;
+      background-color: rgba(0, 0, 0, 0.781);
+      
+    }
+
+    .informacoes p{
+      margin: 10px auto 5px auto !important;
+     
+    }
   }
 
   .informacoes p{
@@ -474,6 +616,7 @@
     width: 100%;
   }
 
+
   .box-descritivo-contato, .box-formulario, .box-links-contato{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -576,6 +719,30 @@ outline: none;
   margin-top: 5px;
 
  }
+
+ @media screen and (max-width:800px){
+  .box-principal-contato{
+   flex-direction: column;
+   justify-content: center;
+  }
+
+  .box-descritivo-contato{
+    display: none;
+  }
+
+  .box-formulario{
+    margin: 10px !important;
+    width: 90%
+  }
+
+  .box-links-contato{
+   display: none;
+  }
+}
+
+
+
+/*footer*/
 
 
  .footer-portfolio{
